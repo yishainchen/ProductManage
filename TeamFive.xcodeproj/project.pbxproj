@@ -11,6 +11,7 @@
 		22165A281BAD5A3B000C74CF /* IngreCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 22165A271BAD5A3B000C74CF /* IngreCategory.m */; };
 		22165A331BAD650D000C74CF /* IngreCategoryPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22165A321BAD650D000C74CF /* IngreCategoryPickerCell.m */; };
 		22165A361BAD6F03000C74CF /* IngredientPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22165A351BAD6F03000C74CF /* IngredientPickerCell.m */; };
+		228D0C211BC3A45100EA826A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228D0C201BC3A45100EA826A /* CoreData.framework */; };
 		841690C21BAD2E3F00869DAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 841690C11BAD2E3F00869DAA /* main.m */; };
 		841690C51BAD2E3F00869DAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 841690C41BAD2E3F00869DAA /* AppDelegate.m */; };
 		841690C81BAD2E3F00869DAA /* TeamFive.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 841690C61BAD2E3F00869DAA /* TeamFive.xcdatamodeld */; };
@@ -51,6 +52,7 @@
 		22165A341BAD6F03000C74CF /* IngredientPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IngredientPickerCell.h; sourceTree = "<group>"; };
 		22165A351BAD6F03000C74CF /* IngredientPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IngredientPickerCell.m; sourceTree = "<group>"; };
 		22165A371BAD6F56000C74CF /* PickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerCell.h; sourceTree = "<group>"; };
+		228D0C201BC3A45100EA826A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3006F5988E993F2E77F12841 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7914D675D126EA0814393205 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		841690BC1BAD2E3F00869DAA /* TeamFive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamFive.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				228D0C211BC3A45100EA826A /* CoreData.framework in Frameworks */,
 				BCB3D8682C9CC6A0ABF586E1 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,6 +112,7 @@
 		0EC9A6CE1E0F370045668EC6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				228D0C201BC3A45100EA826A /* CoreData.framework */,
 				7914D675D126EA0814393205 /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -128,6 +132,19 @@
 			name = ManuReplenish;
 			sourceTree = "<group>";
 		};
+		228D0C1F1BC3A3D800EA826A /* UnuseClass */ = {
+			isa = PBXGroup;
+			children = (
+				841690F11BAD3FDE00869DAA /* SettingsCollectionViewController.h */,
+				841690F21BAD3FDE00869DAA /* SettingsCollectionViewController.m */,
+				841690E81BAD301E00869DAA /* AddItemTableViewController.h */,
+				841690E91BAD301E00869DAA /* AddItemTableViewController.m */,
+				841690FA1BAD411900869DAA /* IngredientsTableViewController.h */,
+				841690FB1BAD411900869DAA /* IngredientsTableViewController.m */,
+			);
+			name = UnuseClass;
+			sourceTree = "<group>";
+		};
 		841690B31BAD2E3F00869DAA = {
 			isa = PBXGroup;
 			children = (
@@ -141,16 +158,11 @@
 				22165A271BAD5A3B000C74CF /* IngreCategory.m */,
 				D368211B1BAE81CA00DF70FA /* AddIngredientTableViewController.h */,
 				D368211C1BAE81D000DF70FA /* AddIngredientTableViewController.m */,
-				841690FA1BAD411900869DAA /* IngredientsTableViewController.h */,
-				841690FB1BAD411900869DAA /* IngredientsTableViewController.m */,
 				841690F71BAD410900869DAA /* AddHandledIngredientTableViewController.h */,
 				841690F81BAD410900869DAA /* AddHandledIngredientTableViewController.m */,
-				841690F11BAD3FDE00869DAA /* SettingsCollectionViewController.h */,
-				841690F21BAD3FDE00869DAA /* SettingsCollectionViewController.m */,
 				841690EB1BAD303100869DAA /* SearchTableViewController.h */,
 				841690EC1BAD303100869DAA /* SearchTableViewController.m */,
-				841690E81BAD301E00869DAA /* AddItemTableViewController.h */,
-				841690E91BAD301E00869DAA /* AddItemTableViewController.m */,
+				228D0C1F1BC3A3D800EA826A /* UnuseClass */,
 				841690BE1BAD2E3F00869DAA /* TeamFive */,
 				841690DB1BAD2E3F00869DAA /* TeamFiveTests */,
 				841690BD1BAD2E3F00869DAA /* Products */,

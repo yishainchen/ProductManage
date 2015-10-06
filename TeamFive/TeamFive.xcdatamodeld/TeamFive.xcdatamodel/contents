@@ -1,4 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8195" systemVersion="14F27" minimumToolsVersion="Automatic">
+    <entity name="Bread" syncable="YES">
+        <attribute name="breadName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="breadPrice" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="breadQuantity" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="breadTime" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Drink" syncable="YES">
+        <attribute name="drinkName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="drinkPrice" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="drinkQuantity" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="drinkTime" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Fruits" syncable="YES">
+        <attribute name="fruitName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fruitPrice" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="fruitQuantity" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="fruitTime" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Jam" syncable="YES">
+        <attribute name="jamName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="jamPrice" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="jamQuantity" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="jamTime" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Tea" syncable="YES">
+        <attribute name="teaName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="teaPrice" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="teaQuantity" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="teaTime" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Tea" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="Fruits" positionX="-54" positionY="0" width="128" height="105"/>
+        <element name="Drink" positionX="-36" positionY="9" width="128" height="105"/>
+        <element name="Bread" positionX="-18" positionY="27" width="128" height="105"/>
+        <element name="Jam" positionX="0" positionY="45" width="128" height="105"/>
+    </elements>
 </model>
