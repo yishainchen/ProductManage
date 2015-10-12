@@ -12,9 +12,13 @@
 		22165A331BAD650D000C74CF /* IngreCategoryPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22165A321BAD650D000C74CF /* IngreCategoryPickerCell.m */; };
 		22165A361BAD6F03000C74CF /* IngredientPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22165A351BAD6F03000C74CF /* IngredientPickerCell.m */; };
 		228D0C211BC3A45100EA826A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228D0C201BC3A45100EA826A /* CoreData.framework */; };
+		228D0C431BC3C39800EA826A /* TeamFive.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 228D0C411BC3C39800EA826A /* TeamFive.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
+		228D0C481BC3C43500EA826A /* Ingredient+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 228D0C451BC3C43500EA826A /* Ingredient+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		228D0C491BC3C43500EA826A /* Ingredient.m in Sources */ = {isa = PBXBuildFile; fileRef = 228D0C471BC3C43500EA826A /* Ingredient.m */; settings = {ASSET_TAGS = (); }; };
+		22D5CF631BC934F400D2EEB5 /* AddByQRcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D5CF621BC934F300D2EEB5 /* AddByQRcode.m */; settings = {ASSET_TAGS = (); }; };
+		22D5CF651BC93D8100D2EEB5 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 22D5CF641BC93D8100D2EEB5 /* beep.mp3 */; settings = {ASSET_TAGS = (); }; };
 		841690C21BAD2E3F00869DAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 841690C11BAD2E3F00869DAA /* main.m */; };
 		841690C51BAD2E3F00869DAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 841690C41BAD2E3F00869DAA /* AppDelegate.m */; };
-		841690C81BAD2E3F00869DAA /* TeamFive.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 841690C61BAD2E3F00869DAA /* TeamFive.xcdatamodeld */; };
 		841690CB1BAD2E3F00869DAA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841690CA1BAD2E3F00869DAA /* ViewController.m */; };
 		841690CE1BAD2E3F00869DAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841690CC1BAD2E3F00869DAA /* Main.storyboard */; };
 		841690D01BAD2E3F00869DAA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841690CF1BAD2E3F00869DAA /* Images.xcassets */; };
@@ -25,7 +29,6 @@
 		841690F31BAD3FDE00869DAA /* SettingsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841690F21BAD3FDE00869DAA /* SettingsCollectionViewController.m */; };
 		841690F91BAD410900869DAA /* AddHandledIngredientTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841690F81BAD410900869DAA /* AddHandledIngredientTableViewController.m */; };
 		841690FC1BAD411900869DAA /* IngredientsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841690FB1BAD411900869DAA /* IngredientsTableViewController.m */; };
-		BCB3D8682C9CC6A0ABF586E1 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7914D675D126EA0814393205 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D368211D1BAE81D000DF70FA /* AddIngredientTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D368211C1BAE81D000DF70FA /* AddIngredientTableViewController.m */; };
 		D3749C3E1BAD716400F4C4C6 /* ExpiringIngredientCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3749C3D1BAD716400F4C4C6 /* ExpiringIngredientCell.xib */; };
 		D3749C441BAD7C1300F4C4C6 /* ExpiringIngredientTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3749C431BAD7C1300F4C4C6 /* ExpiringIngredientTableViewCell.m */; };
@@ -53,6 +56,14 @@
 		22165A351BAD6F03000C74CF /* IngredientPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IngredientPickerCell.m; sourceTree = "<group>"; };
 		22165A371BAD6F56000C74CF /* PickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerCell.h; sourceTree = "<group>"; };
 		228D0C201BC3A45100EA826A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		228D0C421BC3C39800EA826A /* TeamFive.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TeamFive.xcdatamodel; sourceTree = "<group>"; };
+		228D0C441BC3C43500EA826A /* Ingredient+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Ingredient+CoreDataProperties.h"; sourceTree = "<group>"; };
+		228D0C451BC3C43500EA826A /* Ingredient+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Ingredient+CoreDataProperties.m"; sourceTree = "<group>"; };
+		228D0C461BC3C43500EA826A /* Ingredient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ingredient.h; sourceTree = "<group>"; };
+		228D0C471BC3C43500EA826A /* Ingredient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ingredient.m; sourceTree = "<group>"; };
+		22D5CF611BC934F300D2EEB5 /* AddByQRcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddByQRcode.h; sourceTree = "<group>"; };
+		22D5CF621BC934F300D2EEB5 /* AddByQRcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddByQRcode.m; sourceTree = "<group>"; };
+		22D5CF641BC93D8100D2EEB5 /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = beep.mp3; path = ../../beep.mp3; sourceTree = "<group>"; };
 		3006F5988E993F2E77F12841 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7914D675D126EA0814393205 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		841690BC1BAD2E3F00869DAA /* TeamFive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamFive.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,7 +71,6 @@
 		841690C11BAD2E3F00869DAA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		841690C31BAD2E3F00869DAA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		841690C41BAD2E3F00869DAA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		841690C71BAD2E3F00869DAA /* TeamFive.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TeamFive.xcdatamodel; sourceTree = "<group>"; };
 		841690C91BAD2E3F00869DAA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		841690CA1BAD2E3F00869DAA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		841690CD1BAD2E3F00869DAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -95,7 +105,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				228D0C211BC3A45100EA826A /* CoreData.framework in Frameworks */,
-				BCB3D8682C9CC6A0ABF586E1 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,21 +154,43 @@
 			name = UnuseClass;
 			sourceTree = "<group>";
 		};
+		228D0C401BC3B67200EA826A /* CoreDataFile */ = {
+			isa = PBXGroup;
+			children = (
+				228D0C441BC3C43500EA826A /* Ingredient+CoreDataProperties.h */,
+				228D0C451BC3C43500EA826A /* Ingredient+CoreDataProperties.m */,
+				228D0C461BC3C43500EA826A /* Ingredient.h */,
+				228D0C471BC3C43500EA826A /* Ingredient.m */,
+			);
+			name = CoreDataFile;
+			sourceTree = "<group>";
+		};
+		22D5CF601BC9347200D2EEB5 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				22D5CF611BC934F300D2EEB5 /* AddByQRcode.h */,
+				22D5CF621BC934F300D2EEB5 /* AddByQRcode.m */,
+				D368211C1BAE81D000DF70FA /* AddIngredientTableViewController.m */,
+				841690F71BAD410900869DAA /* AddHandledIngredientTableViewController.h */,
+				841690F81BAD410900869DAA /* AddHandledIngredientTableViewController.m */,
+				D368211B1BAE81CA00DF70FA /* AddIngredientTableViewController.h */,
+			);
+			name = Add;
+			sourceTree = "<group>";
+		};
 		841690B31BAD2E3F00869DAA = {
 			isa = PBXGroup;
 			children = (
+				22165A2A1BAD5F16000C74CF /* ManuReplenish */,
+				22D5CF601BC9347200D2EEB5 /* Add */,
+				228D0C401BC3B67200EA826A /* CoreDataFile */,
 				D3CD54F81BAE8EEC00620D38 /* EliminatingTableViewController.h */,
 				D3CD54F91BAE8EEC00620D38 /* EliminatingTableViewController.m */,
-				22165A2A1BAD5F16000C74CF /* ManuReplenish */,
 				D3749C421BAD7C1300F4C4C6 /* ExpiringIngredientTableViewCell.h */,
 				D3749C431BAD7C1300F4C4C6 /* ExpiringIngredientTableViewCell.m */,
 				D3749C3D1BAD716400F4C4C6 /* ExpiringIngredientCell.xib */,
 				22165A261BAD5A3B000C74CF /* IngreCategory.h */,
 				22165A271BAD5A3B000C74CF /* IngreCategory.m */,
-				D368211B1BAE81CA00DF70FA /* AddIngredientTableViewController.h */,
-				D368211C1BAE81D000DF70FA /* AddIngredientTableViewController.m */,
-				841690F71BAD410900869DAA /* AddHandledIngredientTableViewController.h */,
-				841690F81BAD410900869DAA /* AddHandledIngredientTableViewController.m */,
 				841690EB1BAD303100869DAA /* SearchTableViewController.h */,
 				841690EC1BAD303100869DAA /* SearchTableViewController.m */,
 				228D0C1F1BC3A3D800EA826A /* UnuseClass */,
@@ -190,7 +221,7 @@
 				841690CC1BAD2E3F00869DAA /* Main.storyboard */,
 				841690CF1BAD2E3F00869DAA /* Images.xcassets */,
 				841690D11BAD2E3F00869DAA /* LaunchScreen.xib */,
-				841690C61BAD2E3F00869DAA /* TeamFive.xcdatamodeld */,
+				228D0C411BC3C39800EA826A /* TeamFive.xcdatamodeld */,
 				841690BF1BAD2E3F00869DAA /* Supporting Files */,
 			);
 			path = TeamFive;
@@ -200,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				841690C01BAD2E3F00869DAA /* Info.plist */,
+				22D5CF641BC93D8100D2EEB5 /* beep.mp3 */,
 				841690C11BAD2E3F00869DAA /* main.m */,
 			);
 			name = "Supporting Files";
@@ -283,7 +315,6 @@
 				TargetAttributes = {
 					841690BB1BAD2E3F00869DAA = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = HB43UZ3769;
 					};
 					841690D71BAD2E3F00869DAA = {
 						CreatedOnToolsVersion = 6.4;
@@ -316,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				841690CE1BAD2E3F00869DAA /* Main.storyboard in Resources */,
+				22D5CF651BC93D8100D2EEB5 /* beep.mp3 in Resources */,
 				841690D31BAD2E3F00869DAA /* LaunchScreen.xib in Resources */,
 				D3749C3E1BAD716400F4C4C6 /* ExpiringIngredientCell.xib in Resources */,
 				841690D01BAD2E3F00869DAA /* Images.xcassets in Resources */,
@@ -385,17 +417,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				841690C51BAD2E3F00869DAA /* AppDelegate.m in Sources */,
+				228D0C481BC3C43500EA826A /* Ingredient+CoreDataProperties.m in Sources */,
+				22D5CF631BC934F400D2EEB5 /* AddByQRcode.m in Sources */,
 				22165A281BAD5A3B000C74CF /* IngreCategory.m in Sources */,
 				22165A251BAD59DF000C74CF /* ManuReplenishTVC.m in Sources */,
-				841690C81BAD2E3F00869DAA /* TeamFive.xcdatamodeld in Sources */,
 				841690CB1BAD2E3F00869DAA /* ViewController.m in Sources */,
 				841690ED1BAD303100869DAA /* SearchTableViewController.m in Sources */,
 				D3CD54FA1BAE8EEC00620D38 /* EliminatingTableViewController.m in Sources */,
 				D3749C441BAD7C1300F4C4C6 /* ExpiringIngredientTableViewCell.m in Sources */,
 				841690FC1BAD411900869DAA /* IngredientsTableViewController.m in Sources */,
 				841690F91BAD410900869DAA /* AddHandledIngredientTableViewController.m in Sources */,
+				228D0C491BC3C43500EA826A /* Ingredient.m in Sources */,
 				841690F31BAD3FDE00869DAA /* SettingsCollectionViewController.m in Sources */,
 				22165A331BAD650D000C74CF /* IngreCategoryPickerCell.m in Sources */,
+				228D0C431BC3C39800EA826A /* TeamFive.xcdatamodeld in Sources */,
 				841690C21BAD2E3F00869DAA /* main.m in Sources */,
 				841690EA1BAD301E00869DAA /* AddItemTableViewController.m in Sources */,
 				D368211D1BAE81D000DF70FA /* AddIngredientTableViewController.m in Sources */,
@@ -531,8 +566,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TeamFive/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shain.InSeason;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -547,8 +583,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TeamFive/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shain.InSeason;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -622,14 +659,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		841690C61BAD2E3F00869DAA /* TeamFive.xcdatamodeld */ = {
+		228D0C411BC3C39800EA826A /* TeamFive.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				841690C71BAD2E3F00869DAA /* TeamFive.xcdatamodel */,
+				228D0C421BC3C39800EA826A /* TeamFive.xcdatamodel */,
 			);
-			currentVersion = 841690C71BAD2E3F00869DAA /* TeamFive.xcdatamodel */;
+			currentVersion = 228D0C421BC3C39800EA826A /* TeamFive.xcdatamodel */;
 			path = TeamFive.xcdatamodeld;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */

@@ -163,7 +163,23 @@
         if (succeeded) {
             // The object has been saved.
             NSLog(@"Saving to Parse successfully");
-            [self.navigationController popViewControllerAnimated:YES];
+            UIAlertController * alert=  [UIAlertController
+                                         alertControllerWithTitle:@"新增資料成功"
+                                         message:@"已新增一筆食材資料"
+                                         preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault  handler:^(UIAlertAction * action) {
+                [self.navigationController popViewControllerAnimated:YES];
+                
+            }];
+            UIAlertAction* cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+                [alert dismissViewControllerAnimated:YES completion:nil];
+            }];
+            
+            [alert addAction:ok];
+            [alert addAction:cancel];
+            [self presentViewController:alert animated:YES completion:nil];
+            
+            
         } else {
             // There was a problem, check error.description
         }
