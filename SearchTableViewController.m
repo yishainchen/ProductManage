@@ -19,6 +19,8 @@
 @property (strong, nonatomic) NSArray *ingredients;
 @property (strong, nonatomic) NSMutableArray *safeIngredients;
 @property (strong, nonatomic) NSMutableArray *riskIngredients;
+
+
 @end
 NSString static *cellIdentifier = @"ExpiringCell";
 
@@ -26,6 +28,12 @@ NSString static *cellIdentifier = @"ExpiringCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(refresh)
+                  forControlEvents:UIControlEventValueChanged];
+    [self.tbView addSubview:self.refreshControl]; //把RefreshControl加到TableView中
+    
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0.31 green:0.82 blue:0.76 alpha:1.0];
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.29 green:0.29 blue:0.29 alpha:1.0];
     self.safeIngredients = [[NSMutableArray alloc] init];
@@ -48,17 +56,44 @@ NSString static *cellIdentifier = @"ExpiringCell";
             }
         }
         
-        NSLog(@"safe: %ld", self.safeIngredients.count);
-        NSLog(@"risk: %ld", self.riskIngredients.count);
-        
         [self.tableView reloadData];
         [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
     }];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"ExpiringIngredientCell" bundle:nil] forCellReuseIdentifier:cellIdentifier];
-    
-    
+
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(toDetailVC:) name:@"replenishButPress" object:nil];
+}
+
+-(void) refresh{
+    self.safeIngredients = nil;
+    self.safeIngredients = [[NSMutableArray alloc] init];
+    self.riskIngredients = nil;
+    self.riskIngredients = [[NSMutableArray alloc] init];
+    PFQuery *query = [PFQuery queryWithClassName:@"RawIngredient"];
+    [query includeKey:@"ingredient"];
+    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        
+        for (PFObject *object in objects) {
+            // 如果保存期限小於 2 天，加進建議進貨清單
+            if ( [self calculateRemainLifeFrom:object.createdAt ShelfLife:[object[@"ingredient"][@"shelfLife"] integerValue]] > 24*2 ) {
+                
+                [self.safeIngredients addObject: object];
+                
+            }else {
+                
+                [self.riskIngredients addObject:object];
+            }
+        }
+        [self.tableView reloadData];
+        [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+    }];
+    [self.tableView registerNib:[UINib nibWithNibName:@"ExpiringIngredientCell" bundle:nil] forCellReuseIdentifier:cellIdentifier];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(toDetailVC:) name:@"replenishButPress" object:nil];
+    [self.tbView reloadData];
+    [self.tbView reloadInputViews];
+    [self.refreshControl endRefreshing];
 }
 
 - (void)toDetailVC:(NSNotification *)notificaiton {

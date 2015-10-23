@@ -55,15 +55,36 @@
                         </constraints>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBE-Pp-U7x">
-                        <rect key="frame" x="228" y="3" width="84" height="30"/>
+                        <rect key="frame" x="202" y="3" width="72" height="32"/>
                         <animations/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="84" id="Uhy-tG-fAe"/>
-                            <constraint firstAttribute="height" constant="30" id="VnE-U1-6W1"/>
+                            <constraint firstAttribute="width" constant="72" id="Uhy-tG-fAe"/>
+                            <constraint firstAttribute="height" constant="32" id="VnE-U1-6W1"/>
                         </constraints>
                         <state key="normal" title="進貨"/>
                         <connections>
                             <action selector="replenishButton:" destination="vgB-Qo-9n1" eventType="touchUpInside" id="Jo9-Wt-D8l"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DB9-6t-3kG">
+                        <rect key="frame" x="282" y="3" width="30" height="30"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="6fz-kV-ai7"/>
+                            <constraint firstAttribute="width" constant="30" id="YE5-rx-gCC"/>
+                            <constraint firstAttribute="width" constant="30" id="bC4-vS-BeX"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="w09-BK-yIM"/>
+                        </constraints>
+                        <state key="normal" title="X">
+                            <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="YE5-rx-gCC"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <action selector="deleteBtn:" destination="vgB-Qo-9n1" eventType="touchUpInside" id="YzQ-Xw-su8"/>
                         </connections>
                     </button>
                 </subviews>
@@ -73,18 +94,31 @@
                     <constraint firstAttribute="trailing" secondItem="nQd-6r-679" secondAttribute="trailing" constant="8" id="5HP-rs-Ipz"/>
                     <constraint firstAttribute="bottom" secondItem="sIY-FF-9Bx" secondAttribute="bottom" constant="12.5" id="BG0-Ep-Ich"/>
                     <constraint firstItem="2KB-fG-NMD" firstAttribute="top" secondItem="nQd-6r-679" secondAttribute="bottom" constant="8" id="ELi-q6-HJu"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="DB9-6t-3kG" secondAttribute="trailing" constant="27" id="GdC-kv-0l6"/>
                     <constraint firstAttribute="trailing" secondItem="Gr9-p6-Sny" secondAttribute="trailing" constant="8" id="H5p-fw-fB6"/>
                     <constraint firstItem="Gr9-p6-Sny" firstAttribute="leading" secondItem="2KB-fG-NMD" secondAttribute="trailing" constant="8" id="Ram-hH-rmW"/>
                     <constraint firstItem="sIY-FF-9Bx" firstAttribute="leading" secondItem="GMk-L3-3Zf" secondAttribute="leading" constant="8" id="Uke-me-aD3"/>
+                    <constraint firstItem="Gr9-p6-Sny" firstAttribute="top" secondItem="DB9-6t-3kG" secondAttribute="bottom" constant="4" id="YWu-4T-dyY"/>
+                    <constraint firstItem="DB9-6t-3kG" firstAttribute="leading" secondItem="2KB-fG-NMD" secondAttribute="trailing" constant="87" id="Zke-vQ-Ezc"/>
                     <constraint firstItem="Gr9-p6-Sny" firstAttribute="top" secondItem="nQd-6r-679" secondAttribute="bottom" constant="8" id="cAl-qZ-oBs"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="DB9-6t-3kG" secondAttribute="bottom" constant="4.5" id="dm4-Rq-E5b"/>
                     <constraint firstAttribute="trailing" secondItem="sIY-FF-9Bx" secondAttribute="trailing" constant="8" id="eba-Hc-T3l"/>
+                    <constraint firstItem="DB9-6t-3kG" firstAttribute="top" secondItem="GMk-L3-3Zf" secondAttribute="topMargin" constant="-5" id="eh5-r4-KnJ"/>
+                    <constraint firstItem="DB9-6t-3kG" firstAttribute="trailing" secondItem="GMk-L3-3Zf" secondAttribute="trailingMargin" id="eiD-ou-zhX"/>
                     <constraint firstItem="2KB-fG-NMD" firstAttribute="leading" secondItem="GMk-L3-3Zf" secondAttribute="leading" constant="8" id="gJi-sO-rky"/>
                     <constraint firstItem="sIY-FF-9Bx" firstAttribute="top" secondItem="2KB-fG-NMD" secondAttribute="bottom" constant="8" id="m4E-fo-WPX"/>
                     <constraint firstItem="nQd-6r-679" firstAttribute="top" secondItem="GMk-L3-3Zf" secondAttribute="top" constant="8" id="rHQ-z2-tky"/>
                     <constraint firstItem="nQd-6r-679" firstAttribute="leading" secondItem="GMk-L3-3Zf" secondAttribute="leading" constant="8" id="ug8-WZ-kfO"/>
-                    <constraint firstItem="CBE-Pp-U7x" firstAttribute="trailing" secondItem="GMk-L3-3Zf" secondAttribute="trailingMargin" id="vQt-Ma-KGW"/>
+                    <constraint firstItem="CBE-Pp-U7x" firstAttribute="trailing" secondItem="GMk-L3-3Zf" secondAttribute="trailingMargin" constant="-38" id="vQt-Ma-KGW"/>
                     <constraint firstItem="CBE-Pp-U7x" firstAttribute="centerY" secondItem="nQd-6r-679" secondAttribute="centerY" id="zyx-72-Vvv"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="GdC-kv-0l6"/>
+                        <exclude reference="Zke-vQ-Ezc"/>
+                        <exclude reference="dm4-Rq-E5b"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <animations/>
             <connections>

@@ -10,4 +10,6 @@
 
 @interface SearchTableViewController : UITableViewController
 
+@property (nonatomic, strong) IBOutlet UITableView * tbView;
+
 @end

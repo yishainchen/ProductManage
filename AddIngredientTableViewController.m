@@ -8,8 +8,10 @@
 
 #import "AddIngredientTableViewController.h"
 #import "AddHandledIngredientTableViewController.h"
+#import "AppDelegate.h"
 #import <Parse/Parse.h>
 #import "IngreCategory.h"
+
 
 @interface AddIngredientTableViewController ()<UIPickerViewDataSource, UIPickerViewDelegate>
 {
@@ -87,6 +89,29 @@
     ingredient[@"price"] = FoodPrice;
     ingredient[@"category"] = classStr;
     ingredient[@"quantity"] = FoodQuantity;
+    
+    //coreData insert
+     AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    
+    if (self.ingredient) {
+        self.ingredient.ingredientName = foodNameStr;
+        self.ingredient.ingredientPrice = FoodPrice;
+        self.ingredient.ingredientQuantity = FoodQuantity;
+        self.ingredient.ingredientTime = FoodTime;
+    }
+    else {
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"Ingredient" inManagedObjectContext:delegate.managedObjectContext];
+        Ingredient *record = [[Ingredient alloc] initWithEntity:entity insertIntoManagedObjectContext:delegate.managedObjectContext];
+        record.ingredientName = foodNameStr;
+        record.ingredientPrice = FoodPrice;
+        record.ingredientQuantity = FoodQuantity;
+        record.ingredientTime = FoodTime;
+    }
+    NSError *error = nil;
+    [delegate.managedObjectContext save:&error];
+    //coreData Save
+    
+    
     [ingredient saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             // The object has been saved.

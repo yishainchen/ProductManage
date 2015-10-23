@@ -7,6 +7,7 @@
 //
 
 #import "ExpiringIngredientTableViewCell.h"
+#import <Parse/Parse.h>
 
 @implementation ExpiringIngredientTableViewCell
 
@@ -28,5 +29,19 @@
     //[[NSNotificationCenter defaultCenter] postNotificationName:@"replenishButPress" object:self];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"replenishButPress" object:self userInfo:@{ @"id" : self }];
 }
-
+- (IBAction)deleteBtn:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"警告"
+                                                    message:@"刪除庫存資料"
+                                                   delegate:self
+                                          cancelButtonTitle:@"NO"
+                                          otherButtonTitles:@"YES", nil];
+    [alert show];
+    PFQuery *query = [PFQuery queryWithClassName:@"RawIngredient"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        
+        for (PFObject *object in objects) {
+            [object deleteInBackground];
+        }
+    }];
+}
 @end

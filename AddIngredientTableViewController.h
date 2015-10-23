@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Ingredient.h"
 
 @interface AddIngredientTableViewController : UITableViewController
 @property (weak, nonatomic) IBOutlet UIPickerView *classPicker;
@@ -19,5 +20,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *unitTxt;
 @property (weak, nonatomic) IBOutlet UITextField *priceTxt;
 @property (weak, nonatomic) IBOutlet UITextField *timeTxt;
+@property Ingredient *ingredient;
 
 @end

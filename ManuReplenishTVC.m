@@ -10,6 +10,7 @@
 #import "IngreCategory.h"
 #import "PickerCell.h"
 #import "Parse/Parse.h"
+#import "SearchTableViewController.h"
 
 @interface ManuReplenishTVC () <PickerCell>
 @property (strong, nonatomic) IngreCategory *ingreCategory;
@@ -29,6 +30,7 @@
     
     self.categoryCell.delegate = self;
     self.ingredientCell.delegate = self;
+    
 }
 
 #pragma mark - setter & getter
@@ -85,50 +87,6 @@
 }
 
 
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    IngreCategoryPickerCell *cell = (IngreCategoryPickerCell *)[tableView dequeueReusableCellWithIdentifier:@"pickerCell" forIndexPath:indexPath];
-//    
-//    // Configure the cell...
-//    
-//    switch (indexPath.row) {
-//        case 0:
-//            break;
-//            
-//        default:
-//            break;
-//    }
-//    
-//    cell.delegate = self;
-//    return cell;
-//}
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
 /*
 // Override to support conditional rearranging of the table view.
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -167,9 +125,13 @@
                                          alertControllerWithTitle:@"新增資料成功"
                                          message:@"已新增一筆食材資料"
                                          preferredStyle:UIAlertControllerStyleAlert];
+            
+        
             UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault  handler:^(UIAlertAction * action) {
                 [self.navigationController popViewControllerAnimated:YES];
-                
+//              SearchTableViewController  *VC = [self.storyboard instantiateViewControllerWithIdentifier:@"ActionView"];
+//                [self presentViewController:VC animated:YES completion:nil];
+                //通知searchView
             }];
             UIAlertAction* cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
                 [alert dismissViewControllerAnimated:YES completion:nil];
@@ -185,6 +147,7 @@
         }
     }];
     [self.view endEditing:YES];
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
